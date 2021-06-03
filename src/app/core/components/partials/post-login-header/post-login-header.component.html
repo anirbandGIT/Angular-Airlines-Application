@@ -1,0 +1,24 @@
+<div class="header-container">
+  <div class="logo">1 Air</div>
+  <div class="header-content">
+    <div class="nav-links">
+      <!-- <a [routerLink]="this.userInfo[0].role === 'ADMIN'? ['/layout/admin'] : ['/layout/staff']">
+        Dashboard
+      </a> -->
+      <button mat-icon-button *ngFor="let link of navLinks; index as i;" [matTooltip]="link.label"
+        matTooltipPosition="below" (click)="handleNavbarLinkClick(link.path)">
+        <mat-icon [svgIcon]="link.icon" class="widget-icon"></mat-icon>
+      </button>
+    </div>
+    <div class="user-info">
+      <!-- <span>{{this.userInfo[0].role}}</span> -->
+      <!-- <span>LOGOUT IN: {{this.timerValue}}</span> -->
+      <mat-progress-spinner diameter="20" color="warn" mode="determinate" [value]="spinnerProgressValue">
+      </mat-progress-spinner>
+      <span class="timer-value">{{timerValue}}m</span>
+    </div>
+    <button mat-icon-button matTooltip="Logout" aria-label="Logout" (click)="logoutUser()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </div>
+</div>

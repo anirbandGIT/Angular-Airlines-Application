@@ -1,0 +1,6 @@
+<mat-card>
+  <mat-card-content class="card-content" fxLayout fxLayoutAlign="center" fxLayoutGap="5px">
+    <app-common-item-card cardType="MEAL" userType="STAFF" [mealData]="passengerMeal"
+      *ngFor="let passengerMeal of passengerMeals; index as i;" [class.mat-elevation-z2]="true"></app-common-item-card>
+  </mat-card-content>
+</mat-card>

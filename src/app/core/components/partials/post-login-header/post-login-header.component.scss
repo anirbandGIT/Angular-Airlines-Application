@@ -1,0 +1,63 @@
+div.header-container {
+  position: relative;
+  min-height: 50px;
+
+  div.header-content {
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: #424242;
+    color: white;
+
+    div.nav-links {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+      a {
+        padding: 5px;
+
+        color: white;
+        text-decoration: none;
+
+      }
+    }
+
+    div.user-info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span.timer-value {
+        position: absolute;
+        font-size: 8px;
+      }
+    }
+
+    button.mat-icon-button {
+      font-size: 12px;
+    }
+  }
+
+  div.logo {
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    background-color: #dc143c;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14px;
+
+    height: 40px;
+    width: 40px;
+  }
+
+}

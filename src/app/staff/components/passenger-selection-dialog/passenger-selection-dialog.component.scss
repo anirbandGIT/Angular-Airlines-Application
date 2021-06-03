@@ -1,0 +1,14 @@
+.passenger-dialog-header {
+  display: flex;
+
+  .mat-dialog-title {
+    margin: 0;
+    flex-grow: 1;
+  }
+}
+
+.mat-dialog-content {
+  .passenger-list-card {
+    margin: 5px 10px;
+  }
+}

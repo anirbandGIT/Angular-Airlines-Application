@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.snack-bar {
+  &.success {
+    background-color: green;
+  }
+
+  &.error {
+    background-color: red;
+  }
+}
+
+// overriding the snackbar 
+.mat-snack-bar-container {
+  min-width: 3em !important;
+}
+
+.mat-simple-snackbar {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}

@@ -1,0 +1,76 @@
+<!-- main template -->
+<mat-card [ngStyle]="{'background': renderCardBackground(), 'color': renderCardFontColor() }"
+  (click)="navigateOnClick()">
+  <mat-card-content class="card-content">
+    <div *ngIf="cardType === 'PASSENGER' ;then passengerCard else flightCard"></div>
+  </mat-card-content>
+  <!-- <mat-card-actions class="card-actions">
+    <div class="card-action-button">CHECK-IN</div>
+  </mat-card-actions> -->
+</mat-card>
+
+<!-- templates for different type of cards -->
+<!-- FLIGHT -->
+<ng-template #flightCard>
+  <div class="flight-card-row-1">
+    <span class="airline-logo">1 Air</span>
+    <span class="airline-PNR">PNR: {{flightdata?.PNR}}</span>
+    <span class="airline-ID" *ngIf="userType === 'ADMIN'">{{flightdata?.flightId}}</span>
+    <span>EN ROUTE</span>
+  </div>
+  <div class="flight-card-row-2">
+    <div class="flight-card-col-1">
+      <span class="flight-location-abbv">{{flightdata?.departureAirportCode}}</span>
+      <span class="flight-location">London Heathrow</span>
+      <span class="flight-terminal">Terminal: 2</span>
+      <span class="flight-time-date">{{flightdata?.departureTime}}</span>
+    </div>
+    <div class="flight-card-col-2">
+      <div class="flight-duration-logo-container">
+        <span class="flight-duration-logo"></span>
+      </div>
+      <span class="flight-duration">{{flightdata?.journeyDuration}}</span>
+    </div>
+    <div class="flight-card-col-3">
+      <span class="flight-location-abbv">{{flightdata?.arrivalAirportCode}}</span>
+      <span class="flight-location">Athens International Airport</span>
+      <span class="flight-terminal">Terminal: 1</span>
+      <span class="flight-time-date">{{flightdata?.arrivalTime}}</span>
+    </div>
+  </div>
+  <!-- <div class="row-3"></div> -->
+</ng-template>
+
+<!-- PASSENGERS -->
+<ng-template #passengerCard>
+  <div class="passenger-card-content-container">
+    <div class="passenger-card-col-1">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="passenger-card-col-2">
+      <div class="passenger-card-row-1">
+        <span class="passenger-name">{{passengerData?.firstname}} {{passengerData?.lastname}}</span>
+        <span class="passenger-basic-info">{{passengerData?.gender}} from {{passengerData?.city}},
+          {{passengerData?.country}}</span>
+      </div>
+      <div class="passenger-card-row-2">
+        <div class="passenger-row-2-widget">
+          <mat-icon class="widget-icon">cake</mat-icon>
+          <span class="passenger-row-2-widget-text">{{passengerData?.dob}}</span>
+        </div>
+        <div class="passenger-row-2-widget">
+          <mat-icon svgIcon="location_map" class="widget-icon"></mat-icon>
+          <span class="passenger-row-2-widget-text">{{passengerData?.country}}, {{passengerData?.zip}}</span>
+        </div>
+        <div class="passenger-row-2-widget">
+          <mat-icon class="widget-icon">phone</mat-icon>
+          <span class="passenger-row-2-widget-text">{{passengerData?.phone}}</span>
+        </div>
+        <div class="passenger-row-2-widget">
+          <mat-icon class="widget-icon">email</mat-icon>
+          <span class="passenger-row-2-widget-text">{{passengerData?.email}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

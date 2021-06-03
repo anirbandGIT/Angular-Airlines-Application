@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="login-form-container">
+    <h2>LOGIN</h2>
+    <!-- for TEMPLATE DRIVEN FORM, most of the form logic lies in the html -->
+    <!-- 1. add FormsModule to the respective module -->
+    <!-- 2. update the <form> tag with a template reference variable, here userLoginForm -->
+    <!-- 3. give name and id attributes as needed to input tags like <input>, also add ngModel to add respective 
+    input to the form control -->
+    <!-- 4. make function to handle the form submit and bind to ngSubmit event, pass the form template variable to it -->
+    <form class="login-form" id="login-form"(ngSubmit)="handleLoginFormSubmit(userLoginForm)" #userLoginForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label for="loginUsername">Email</mat-label>
+        <input matInput id="loginUsername" name="loginUsername" maxlength="20" (cut)="triggerForbidden('Forbidden')"
+          (paste)="triggerForbidden('Forbidden')" (copy)="triggerForbidden('Forbidden')" ngModel>
+        <mat-hint align="start"><strong>Kindly enter you email address</strong> </mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label for="loginPassword">Password</mat-label>
+        <input matInput id="loginPassword" name="loginPassword" maxlength="15" (cut)="triggerForbidden('Forbidden')"
+          (paste)="triggerForbidden('Forbidden')" (copy)="triggerForbidden('Forbidden')" ngModel>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">LOGIN</button>
+    </form>
+    <hr>
+    <button type="button" mat-raised-button>LOGIN WITH GOOGLE</button>
+  </div>
+
+  <mat-card>
+    <h2>Credentials</h2>
+    <p>To login as airline admin use username : <strong>admin</strong> and password : <strong>Admin@123</strong>.
+      To login as airline staff use username : <strong>staff1</strong> and password : <strong>Password@123</strong>.</p>
+  </mat-card>
+</div>

@@ -1,0 +1,76 @@
+<h2>Basic Form</h2>
+<form [formGroup]="passengerForm" [hidden]="formSubmitted" (ngSubmit)="submitForm()">
+  {{passengerForm.value | json}}
+  <hr>
+  <div class="passenger-form-controls">
+    <div class="passenger-form-control-row">
+      <mat-form-field>
+        <mat-label>Name of the passenger</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="name.touched && name.invalid">Name is a required.</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="passenger-form-control-row">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="email.touched && email.errors?.required">Email is a required</mat-error>
+        <mat-error *ngIf="email.touched && email.errors?.email">Entered email is not in valid format</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phoneNumber">
+        <mat-error *ngIf="phoneNumber.touched && (phoneNumber.errors?.minlength || phoneNumber.errors?.maxlength)">Phone
+          number must be between 6 to 12 characters</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="passenger-form-control-debug">
+      <span>EMAIL touched? {{email.touched}}</span>
+      <span>EMAIL untouched? {{email.untouched}}</span>
+      <span>EMAIL dirty? {{email.dirty}}</span>
+      <span>EMAIL pristine? {{email.pristine}}</span>
+    </div>
+
+    <div class="passenger-form-control-row">
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="dob" formControlName="dob" disabled>
+        <mat-datepicker-toggle matSuffix [for]="dob"></mat-datepicker-toggle>
+        <mat-datepicker #dob disabled="false"></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="passenger-form-control-row">
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>ZIP Code</mat-label>
+        <input matInput formControlName="zip">
+      </mat-form-field>
+      <hr>
+      <div class="passenger-form-control-row">
+        <mat-checkbox formControlName="termsAccepted">I accept the Terms & Conditions</mat-checkbox>
+      </div>
+    </div>
+  </div>
+  <div class="passenger-form-actions">
+    <button mat-raised-button type="submit" [disabled]="passengerForm.invalid">SUBMIT FORM</button>
+    <button class="align-right" mat-raised-button type="button" (click)="setFormData()">SET</button>
+    <button class="align-right" mat-raised-button type="button" (click)="patchFormData()">PATCH</button>
+  </div>
+</form>

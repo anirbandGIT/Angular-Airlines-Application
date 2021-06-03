@@ -1,0 +1,46 @@
+::ng-deep .mat-tab-label {
+  opacity: 1 !important;
+  border-radius: 5px;
+
+  margin: 1em 0 2em 1em;
+  padding: 15px 20px;
+  background-color: #424242;
+  color: white;
+
+  font-size: 12px;
+}
+
+::ng-deep .mat-tab-label-active {
+  border-radius: 5px;
+
+  margin: 1em 0 2em 1em;
+  padding: 15px 20px;
+  background-image: linear-gradient(135deg, rgba(98, 138, 224, 0.46) 0%, rgba(98, 138, 224, 0.46) 14.286%, rgba(107, 116, 201, 0.46) 14.286%, rgba(107, 116, 201, 0.46) 28.572%, rgba(115, 94, 178, 0.46) 28.572%, rgba(115, 94, 178, 0.46) 42.858%, rgba(124, 73, 156, 0.46) 42.858%, rgba(124, 73, 156, 0.46) 57.144%, rgba(133, 51, 133, 0.46) 57.144%, rgba(133, 51, 133, 0.46) 71.43%, rgba(141, 29, 110, 0.46) 71.43%, rgba(141, 29, 110, 0.46) 85.716%, rgba(150, 7, 87, 0.46) 85.716%, rgba(150, 7, 87, 0.46) 100.002%), linear-gradient(45deg, rgb(60, 13, 119) 0%, rgb(60, 13, 119) 14.286%, rgb(50, 25, 138) 14.286%, rgb(50, 25, 138) 28.572%, rgb(41, 36, 156) 28.572%, rgb(41, 36, 156) 42.858%, rgb(31, 48, 175) 42.858%, rgb(31, 48, 175) 57.144%, rgb(21, 59, 194) 57.144%, rgb(21, 59, 194) 71.43%, rgb(12, 71, 212) 71.43%, rgb(12, 71, 212) 85.716%, rgb(2, 82, 231) 85.716%, rgb(2, 82, 231) 100.002%);
+  color: white;
+
+  font-size: 12px;
+}
+
+::ng-deep .mat-tab-label:focus {
+  border-radius: 5px;
+
+  margin: 1em 0 2em 1em;
+  padding: 30px 40px;
+  background-image: linear-gradient(135deg, rgba(98, 138, 224, 0.46) 0%, rgba(98, 138, 224, 0.46) 14.286%, rgba(107, 116, 201, 0.46) 14.286%, rgba(107, 116, 201, 0.46) 28.572%, rgba(115, 94, 178, 0.46) 28.572%, rgba(115, 94, 178, 0.46) 42.858%, rgba(124, 73, 156, 0.46) 42.858%, rgba(124, 73, 156, 0.46) 57.144%, rgba(133, 51, 133, 0.46) 57.144%, rgba(133, 51, 133, 0.46) 71.43%, rgba(141, 29, 110, 0.46) 71.43%, rgba(141, 29, 110, 0.46) 85.716%, rgba(150, 7, 87, 0.46) 85.716%, rgba(150, 7, 87, 0.46) 100.002%), linear-gradient(45deg, rgb(60, 13, 119) 0%, rgb(60, 13, 119) 14.286%, rgb(50, 25, 138) 14.286%, rgb(50, 25, 138) 28.572%, rgb(41, 36, 156) 28.572%, rgb(41, 36, 156) 42.858%, rgb(31, 48, 175) 42.858%, rgb(31, 48, 175) 57.144%, rgb(21, 59, 194) 57.144%, rgb(21, 59, 194) 71.43%, rgb(12, 71, 212) 71.43%, rgb(12, 71, 212) 85.716%, rgb(2, 82, 231) 85.716%, rgb(2, 82, 231) 100.002%);
+  color: white;
+
+  font-size: 14px;
+}
+
+::ng-deep .mat-ink-bar {
+  visibility: hidden !important;
+}
+
+div.flights-list {
+  display: flex;
+  flex-direction: column;
+
+  .flights-list-card {
+    margin: 5px 1em;
+  }
+}

@@ -1,0 +1,45 @@
+<section class="analytics-cards">
+  <!-- <mat-card>
+    <div class="pie-chart" [chart]="pieChart"></div>
+  </mat-card> -->
+</section>
+<mat-tab-group [selectedIndex]="0">
+  <mat-tab label="Airlines">
+    <ng-template mat-tab-label>
+      Manage Flights
+    </ng-template>
+
+    <ng-template matTabContent>
+      <!-- Loaded: {{getTimeLoaded(1) | date:'medium'}} -->
+      <div class="flights-list">
+        <app-common-data-card [cardType]="flight?.company" userType="ADMIN" class="flights-list-card"
+          [flightdata]="flight" *ngFor="let flight of flights; index as i;">
+        </app-common-data-card>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label=" Second">
+    <ng-template mat-tab-label>
+      Manage Passengers
+    </ng-template>
+
+    <ng-template matTabContent>
+      <!-- Loaded: {{getTimeLoaded(2) | date:'medium'}} -->
+      <div class="passengers-list-actions-1">
+        <mat-checkbox>Checked</mat-checkbox>
+      </div>
+      <div class="passengers-list-actions-2">
+        <button mat-raised-button>ADD PASSENGER</button>
+        <mat-card>SOME ANALYTICS</mat-card>
+      </div>
+      <div class="passengers-list">
+        <app-common-data-card cardType="PASSENGER" userType="STAFF" class="passenger-list-card">
+        </app-common-data-card>
+        <app-common-data-card cardType="PASSENGER" userType="STAFF" class="passenger-list-card">
+        </app-common-data-card>
+        <app-common-data-card cardType="PASSENGER" userType="STAFF" class="passenger-list-card">
+        </app-common-data-card>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

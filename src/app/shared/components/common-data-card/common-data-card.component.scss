@@ -1,0 +1,138 @@
+.mat-card {
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+
+  // for AIRLINE type card
+  .card-content {
+    margin: 0;
+    padding: 5px;
+
+    .flight-card-row-1 {
+      display: flex;
+
+      span.airline-logo {
+        display: flex;
+        justify-content: center;
+
+        color: white;
+        background-color: #dc143c;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 12px;
+
+        height: 30px;
+        width: 30px;
+      }
+
+
+      span.airline-PNR {
+        margin: 0 5px;
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      span.airline-ID {
+        margin: 0 5px;
+        padding: 0 5px;
+        background-color: #424242;
+        color: white;
+
+        font-weight: bold;
+        font-size: 22px;
+
+        border-radius: 5px;
+      }
+    }
+
+    .flight-card-row-2 {
+      display: flex;
+
+      .flight-card-col-1,
+      .flight-card-col-2,
+      .flight-card-col-3 {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 10px;
+
+        span.flight-location-abbv {
+          font-weight: bold;
+          font-size: 26px;
+        }
+
+        span.flight-location,
+        span.flight-terminal,
+        span.flight-time-date,
+        span.flight-duration {
+          font-size: 12px;
+        }
+
+        .flight-duration-logo-container {
+          display: flex;
+          justify-content: center;
+
+          span.flight-duration-logo {
+            width: 0;
+            height: 0;
+            padding-left: 5px;
+            border-top: 5px solid transparent;
+            border-left: 10px solid grey;
+            border-bottom: 5px solid transparent;
+          }
+        }
+      }
+    }
+
+    .passenger-card-content-container {
+      display: flex;
+      flex-direction: row;
+
+      .passenger-card-col-1 {
+        margin: 5px 10px;
+
+        .mat-icon {
+          height: auto;
+          width: auto;
+          font-size: 40px;
+        }
+      }
+
+      .passenger-card-col-2 {
+        div.passenger-card-row-1 {
+          span.passenger-name {
+            margin: 5px 0;
+            font-weight: bold;
+            font-size: 22px;
+          }
+
+          span.passenger-basic-info {
+            display: block;
+            font-size: 14px;
+          }
+        }
+
+        div.passenger-card-row-2 {
+          display: flex;
+
+          div.passenger-row-2-widget {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin: 2px 5px;
+
+            span.passenger-row-2-widget-text {
+              font-size: 12px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .card-actions {
+    .card-action-button {
+      background-color: inherit;
+    }
+  }
+}

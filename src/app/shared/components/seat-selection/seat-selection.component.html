@@ -1,0 +1,62 @@
+<mat-card>
+  <div>
+    <h2>Seat Selection and Check-In for Passengers</h2>
+    <p>asdsadsa</p>
+  </div>
+  <section class="seat-selection-legend-container">
+    <div class="seat-category">
+      <button type="button" class="business-category"
+        (click)="handleScrollToViewOnButtonClick($event, 'business-class-seats')">Business</button>
+      <button type="button" class="economy-category"
+        (click)="handleScrollToViewOnButtonClick($event, 'economy-class-seats-1')">Economy</button>
+    </div>
+    <div class="seat-selection-legend" [class.mat-elevation-z2]="true">
+      <div>Young Traveller</div>
+      <div>Pregnant/ Travelling w/ Infant</div>
+      <div>Blocked As Per COVID Norms</div>
+      <div>Booked</div>
+      <div>Available</div>
+    </div>
+  </section>
+  <section class="seat-selection-container">
+    <!-- BUSINESS -->
+    <div class="col-1" id="business-class-seats">
+      <div class="row" *ngFor="let row of col1RowArr;index as i">
+        <mat-checkbox [ngStyle]="{'opacity': j === 2 || j === 3 ? 0: 1}"
+          [value]="convertSeatRowNumToChar(j)+(i+col1FirstRowtNum)" *ngFor="let seat of col1RowSeatArr; index as j;"
+          labelPosition="before" [checked]="selectedCheckBox === convertSeatRowNumToChar(j)+(i+col1FirstRowtNum)"
+          (change)="handleCheckBoxSelection($event)">
+          {{i === 0? convertSeatRowNumToChar(j): null}}
+        </mat-checkbox>
+        <span>{{i+col1FirstRowtNum}}</span>
+      </div>
+    </div>
+    <!-- ECONOMY -->
+    <div class="col-2" id="economy-class-seats-1">
+      <div class="row" *ngFor="let row of col2RowArr;index as i">
+        <mat-checkbox *ngFor="let seat of col2RowSeatArr; index as j;"
+          [value]="convertSeatRowNumToChar(j)+(i+col2FirstRowtNum)" labelPosition="before"
+          [checked]="selectedCheckBox === convertSeatRowNumToChar(j)+(i+col2FirstRowtNum)"
+          (change)="handleCheckBoxSelection($event)">
+          <!-- row:{{convertSeatRowNumToChar(j)}}; col:{{i+col2FirstRowtNum}} -->
+          {{i === 0? convertSeatRowNumToChar(j): null}}
+        </mat-checkbox>
+        <span>{{i+col2FirstRowtNum}}</span>
+      </div>
+    </div>
+    <div class="col-3" id="economy-class-seats-2">
+      <div class="row" *ngFor="let row of col3RowArr;index as i">
+        <mat-checkbox *ngFor="let seat of col3RowSeatArr; index as j;"
+          [value]="convertSeatRowNumToChar(j)+(i+col3FirstRowtNum)" labelPosition="before"
+          [checked]="selectedCheckBox === convertSeatRowNumToChar(j)+(i+col3FirstRowtNum)"
+          (change)="handleCheckBoxSelection($event)">
+          <!-- row:{{convertSeatRowNumToChar(j)}}; col:{{i+col3FirstRowtNum}} -->
+          {{i === 0? convertSeatRowNumToChar(j): null}}
+        </mat-checkbox>
+        <span>{{i+col3FirstRowtNum}}</span>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </section>
+</mat-card>

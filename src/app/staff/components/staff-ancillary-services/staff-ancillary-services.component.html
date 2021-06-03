@@ -1,0 +1,48 @@
+<div class="ancillary-services-container">
+  <section class="flight-information">
+    <div class="flight-info-row-1">
+      <span class="airline-logo">1 Air</span>
+      <span class="airline-PNR">{{selectedFlightInfo?.flightId}}</span>
+      <span>EN ROUTE</span>
+    </div>
+    <div class="flight-info-row-2">
+      <div class="flight-info-row-2-col-1">
+        <mat-icon svgIcon="flight_departure" class="flight-departure-icon"></mat-icon>
+        <span class="flight-location-abbv">{{selectedFlightInfo?.departureAirportCode}}</span>
+      </div>
+      <div class="flight-info-row-2-col-2">
+        <span class="flight-location">Athens International Airport</span>
+        <span class="flight-terminal">Terminal: 2</span>
+        <span class="flight-time-date">Date: 11 July {{selectedFlightInfo?.departureTime}}</span>
+      </div>
+    </div>
+    <div class="flight-info-row-3">
+      <span class="flight-duration">--- {{selectedFlightInfo?.journeyDuration}} ---</span>
+    </div>
+    <div class="flight-info-row-4">
+      <div class="flight-info-row-4-col-1">
+        <mat-icon svgIcon="flight_arrival" class="flight-arrival-icon"></mat-icon>
+        <span class="flight-location-abbv">{{selectedFlightInfo?.arrivalAirportCode}}</span>
+      </div>
+      <div class="flight-info-row-4-col-2">
+        <span class="flight-location">Athens International Airport</span>
+        <span class="flight-terminal">Terminal: 1</span>
+        <span class="flight-time-date">Date: 12 July {{selectedFlightInfo?.arrivalTime}}</span>
+      </div>
+    </div>
+    <div>
+      <span>Click on CHANGE PASSENGER to change passenger, generate PNR and check-in for other passengers</span>
+      <button mat-raised-button (click)="openDialog()">CHANGE PASSENGER</button>
+    </div>
+  </section>
+  <section class="services">
+    <div [ngSwitch]="serviceType">
+      <!-- The Service Type is -- {{serviceType}} -->
+      <app-seat-selection *ngSwitchCase="'CHECKIN'"></app-seat-selection>
+      <app-extra-luggage-selection *ngSwitchCase="'LUGGAGE'"></app-extra-luggage-selection>
+      <app-meal-selection *ngSwitchCase="'MEAL'"></app-meal-selection>
+      <app-extra-luggage-selection *ngSwitchDefault></app-extra-luggage-selection>
+    </div>
+
+  </section>
+</div>

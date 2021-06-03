@@ -1,0 +1,29 @@
+div.header-container {
+  position: relative;
+  min-height: 50px;
+
+  div.header-content {
+    background-color: #424242;
+    height: 20px;
+  }
+
+  div.logo {
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    background-color: #dc143c;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14px;
+
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+  }
+
+}

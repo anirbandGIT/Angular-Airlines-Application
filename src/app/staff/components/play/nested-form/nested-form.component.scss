@@ -1,0 +1,36 @@
+form {
+  margin: 10px;
+  padding: 5px;
+
+  div.passenger-form-controls {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: #dee6b1;
+
+    div.passenger-form-control-row {
+      display: block;
+
+      .mat-form-field,
+      .mat-radio-group {
+        margin-left: 20px;
+      }
+    }
+
+    div.passenger-form-control-debug {
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+      background-color: #edd38c;
+      font-size: 12px;
+    }
+  }
+
+  div.passenger-form-actions {
+
+    button.align-right {
+      margin-left: auto;
+    }
+  }
+}

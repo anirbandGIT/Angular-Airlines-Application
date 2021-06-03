@@ -1,0 +1,192 @@
+{
+  "flights": [{
+      "id": 1,
+      "company": "1AIR",
+      "flightId": "1A - 1211",
+      "PNR": "VAJB3Y",
+      "departureAirportCode": "ORD",
+      "departureTime": "15:00",
+      "arrivalAirportCode": "LGA",
+      "arrivalTime": "17:58",
+      "journeyDuration": "1h 58m"
+    },
+    {
+      "id": 2,
+      "company": "Supa Airways",
+      "flightId": "SUA - 4652",
+      "PNR": "CEL22K",
+      "departureAirportCode": "ORD",
+      "departureTime": "12:03",
+      "arrivalAirportCode": "JFK",
+      "arrivalTime": "15:09",
+      "journeyDuration": "2h 06m"
+    },
+    {
+      "id": 3,
+      "company": "1AIR",
+      "flightId": "1A - 4716",
+      "PNR": "YGT5YN",
+      "departureAirportCode": "EWR",
+      "departureTime": "06:00",
+      "arrivalAirportCode": "ORD",
+      "arrivalTime": "07:23",
+      "journeyDuration": "2h 23m"
+    },
+    {
+      "id": 4,
+      "company": "1AIR",
+      "flightId": "1A - 1211",
+      "PNR": "OEM9UO",
+      "departureAirportCode": "LGA",
+      "departureTime": "08:00",
+      "arrivalAirportCode": "ORD",
+      "arrivalTime": "10:31",
+      "journeyDuration": "2h 31m"
+    }
+  ],
+  "passengers": [{
+      "id": 1,
+      "passengerID": "PSNGR001",
+      "firstname": "Josephine",
+      "lastname": "Darakjy",
+      "gender": "Female",
+      "dob": "07-24-1982",
+      "address": "4 B Blue Ridge Blvd",
+      "city": "Brighton",
+      "country": "England",
+      "zip": 48116,
+      "phone": "810-292-9388",
+      "email": "josephine_darakjy@morasca.org",
+      "PNR": "VAJB3Y",
+      "youngTraveller": false,
+      "pregnantOrWithInfant": false
+    },
+    {
+      "id": 2,
+      "passengerID": "PSNGR002",
+      "firstname": "Lenna",
+      "lastname": "Paprocki",
+      "gender": "Female",
+      "dob": "12-02-1997",
+      "address": "639 Main St",
+      "city": "Anchorage",
+      "country": "Alaska",
+      "zip": 99501,
+      "phone": "907-385-4412",
+      "email": "lpaprocki@hotmail.com",
+      "PNR": "VAJB3Y",
+      "youngTraveller": false,
+      "pregnantOrWithInfant": true
+    }
+  ],
+  "users": [{
+      "id": 1,
+      "username": "admin",
+      "role": "ADMIN",
+      "password": "Admin@123"
+    },
+    {
+      "id": 2,
+      "username": "staff1",
+      "role": "STAFF",
+      "password": "Password@123"
+    },
+    {
+      "id": 3,
+      "username": "developer",
+      "role": "DEVELOPER",
+      "password": "Developer@123"
+    }
+  ],
+  "luggageAllowance": [{
+      "id": 1,
+      "flightId": "1A - 1211",
+      "extraLuggageAllowed": false,
+      "minWeightAllowed": null,
+      "maxWeightAllowed": null,
+      "pricePerKiloInDollars": null
+    },
+    {
+      "id": 2,
+      "flightId": "SUA - 4652",
+      "extraLuggageAllowed": true,
+      "minWeightAllowed": 5,
+      "maxWeightAllowed": 20,
+      "pricePerKiloInDollars": 115
+    },
+    {
+      "id": 3,
+      "flightId": "1A - 4716",
+      "extraLuggageAllowed": false,
+      "minWeightAllowed": null,
+      "maxWeightAllowed": null,
+      "pricePerKiloInDollars": null
+    }
+  ],
+  "mealAllowance": [{
+      "id": 1,
+      "flightId": "1A - 1211",
+      "meals": [{
+          "id": 1,
+          "mealId": "MEAL-BRK-44GT",
+          "name": "Museli w/ Yogurt Breakfast",
+          "description": "Bowl of Museli with low-fat Yogurt.",
+          "mealType": "BREAKFAST",
+          "veg": true,
+          "priceInDollars": 45,
+          "calories": 400
+        },
+        {
+          "id": 2,
+          "mealId": "MEAL-LUN-78YT",
+          "name": "Chicken Salad w/ Crisps",
+          "description": "Chicken salad sandwich, mayo and crisps.",
+          "mealType": "LUNCH",
+          "veg": false,
+          "priceInDollars": 79,
+          "calories": 570
+        },
+        {
+          "id": 3,
+          "mealId": "MEAL-LUN-46GT",
+          "name": "Veg Lasagne",
+          "description": "Vegetarian lasagne, an apple.",
+          "mealType": "LUNCH",
+          "veg": true,
+          "priceInDollars": 65,
+          "calories": 600
+        },
+        {
+          "id": 4,
+          "mealId": "MEAL-DIN-23UT",
+          "name": "2 Sausage w/ Mash",
+          "description": "Two sausages with small portion of mash.",
+          "mealType": "DINNER",
+          "veg": false,
+          "priceInDollars": 69,
+          "calories": 600
+        },
+        {
+          "id": 5,
+          "mealId": "MEAL-DIN-25UT",
+          "name": "1/2 American Pizza",
+          "description": "Half an American hot pizza, quarter garlic bread baguette, a banana.",
+          "mealType": "DINNER",
+          "veg": true,
+          "priceInDollars": 59,
+          "calories": 600
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "flightId": "SUA - 4652",
+      "meals": null
+    },
+    {
+      "id": 3,
+      "flightId": "1A - 4716",
+      "meals": null
+    }
+  ]
+}

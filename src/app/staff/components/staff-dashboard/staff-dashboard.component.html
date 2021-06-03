@@ -1,0 +1,32 @@
+<div id="staff-dashboard">
+  <mat-tab-group>
+    <mat-tab label="Manage Check In" class="staff-tab">
+      <ng-template mat-tab-label>
+        Manage Check-In
+      </ng-template>
+      <ng-template matTabContent>
+        <!-- Loaded: {{getTimeLoaded(1) | date:'medium'}} -->
+        <p>Manage flight check-in for passenger after selecting a flight from below.</p>
+        <div class="flights-list">
+          <app-common-data-card [cardType]="flight?.company" userType="STAFF" class="flights-list-card"
+            [flightdata]="flight" *ngFor="let flight of flights; index as i;">
+          </app-common-data-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Manage Ancillary or In Flight Services">
+      <ng-template mat-tab-label>
+        Manage Ancillary/ In-Flight Services
+      </ng-template>
+      <ng-template matTabContent>
+        <!-- Loaded: {{getTimeLoaded(2) | date:'medium'}} -->
+        <p>Manage flight itinerary and services for passenger after selecting a flight from below.</p>
+        <div class="flights-list">
+          <app-common-data-card [cardType]="flight?.company" userType="STAFF" class="flights-list-card"
+            [flightdata]="flight" *ngFor="let flight of flights; index as i;">
+          </app-common-data-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

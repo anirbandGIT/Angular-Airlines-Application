@@ -1,0 +1,28 @@
+div.item-card-container {
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  div.meal-image {
+    background-color: pink;
+  }
+
+  div.meal-info {
+    display: flex;
+    flex-direction: column;
+
+    div.meal-info-row-2 {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    div.meal-info-row-3 {
+      align-self: flex-end;
+    }
+  }
+}

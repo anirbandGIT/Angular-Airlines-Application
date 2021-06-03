@@ -1,0 +1,27 @@
+<div class="item-card-container">
+  <div *ngIf="cardType === 'MEAL' ;then mealCard else shopItemCard"></div>
+</div>
+
+<!-- templates for different type of cards -->
+<!-- MEAL -->
+<ng-template #mealCard>
+  <div class="meal-image">MEAL IMAGE</div>
+  <div class="meal-info">
+    <span>{{mealData?.name}}</span>
+    <span>{{mealData?.description}}</span>
+    <div class="meal-info-row-2">
+      <span>{{mealData?.veg === true? 'VEG': 'NON-VEG'}}</span>
+      <span>{{mealData?.calories}}</span>
+      <span>$ {{mealData?.priceInDollars}}</span>
+    </div>
+    <div class="meal-info-row-3">
+      <button mat-raised-button>ADD</button>
+    </div>
+  </div>
+</ng-template>
+
+<!-- SHOP ITEM -->
+<ng-template #shopItemCard>
+  <div>IMAGE</div>
+  <div></div>
+</ng-template>

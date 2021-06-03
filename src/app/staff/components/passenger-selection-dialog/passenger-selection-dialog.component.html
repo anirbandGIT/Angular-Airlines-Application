@@ -1,0 +1,20 @@
+<div class="passenger-dialog-header">
+  <h2 mat-dialog-title>PASSENGER SELECTION</h2>
+  <button mat-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div>Kindly select a passenger to proceed further.</div>
+
+<mat-dialog-actions>
+</mat-dialog-actions>
+<mat-checkbox *ngFor="let pssngrTypeChkbox of pssngrTypeChkboxes; index as i" [name]="pssngrTypeChkbox.name"
+  [labelPosition]="after" [checked]="this.checkedItems.get(pssngrTypeChkbox.name)"
+  (change)="handleCheckboxChange($event)">
+  {{pssngrTypeChkbox.label}}
+</mat-checkbox>
+<mat-dialog-content>
+  <app-common-data-card cardType="PASSENGER" userType="STAFF" class="passenger-list-card" [passengerData]="passenger"
+    *ngFor="let passenger of passengers; index as i;"></app-common-data-card>
+</mat-dialog-content>
