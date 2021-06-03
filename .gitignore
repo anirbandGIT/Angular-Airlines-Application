@@ -22,6 +22,7 @@ speed-measure-plugin.json
 *.launch
 .settings/
 *.sublime-workspace
+.prettierrc.json
 
 # IDE - VSCode
 .vscode/*
@@ -35,6 +36,7 @@ speed-measure-plugin.json
 /.sass-cache
 /connect.lock
 /coverage
+debug.log
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
